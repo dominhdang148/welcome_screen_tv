@@ -1,0 +1,144 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+body {
+    padding: 2%;
+    background: url('/assets/bellagio-las-vegas.jpg'), linear-gradient(180deg, rgba(0, 0, 0, 0.7) 32.81%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+
+/* Welcome Header Style */
+
+
+.welcome-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-header-right,
+.welcome-header-right-info,
+.welcome-header-right-info-temp {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.welcome-header-right-vertical-line {
+    display: inline-block;
+    border-left: 2px solid white;
+    margin: 0 0;
+    height: 2em
+}
+
+.welcome-header-right-date {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0 0.2em;
+}
+
+.welcome-header-right-info-time {
+    font-size: 1.75em;
+    margin: 0 0.2em;
+    font-weight: 500;
+}
+
+.welcome-header-right-info-temp {
+    font-size: 1.6em;
+    font-weight: 500;
+    gap: 0.1em;
+}
+
+/* Content Style */
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-content-greeting>h2 {
+    font-size: 7em;
+    font-weight: 600;
+    line-height: 1.5 em;
+    margin: 0 0;
+}
+
+.welcome-content-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5em;
+}
+
+.welcome-content-greeting>h1 {
+    font-size: 8em;
+    line-height: 1em;
+    font-weight: 600;
+    margin: 0 0;
+}
+
+.welcome-content-greeting>strong {
+    font-size: 4em;
+    line-height: 2em;
+    font-weight: 500;
+    margin: 0 0;
+}
+
+.welcome-content-language {
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.language-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em
+}
+
+.language-cards input[type=radio] {
+    display: none;
+}
+
+.language-card {
+    width: 100%;
+    flex-basis: 10%;
+    flex-shrink: 0;
+    transition: all;
+
+}
+
+.language-card__img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    border-radius: 10px;
+}
+
+.language-card:has(.language-card__input:checked) {
+    flex-basis: 15%;
+    aspect-ratio: 3/2;
+}
